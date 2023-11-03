@@ -15,7 +15,7 @@
 Рисунок 1 - configMap
 
 2.  Далее был создан replicaSet с 2 репликами контейнера ifilyaninitmo/itdt-contained-frontend:master, в него были переданы переменные REACT_APP_USERNAME, REACT_APP_COMPANY_NAME с помощью configMap .(см. Рисунок 2)
-<image src="https://github.com/evashka28/2023_2024-introduction_to_distributed_technologies-k4111c-vinnikova_e_m/blob/main/lab3/img/2.png
+<image src="https://github.com/evashka28/2023_2024-introduction_to_distributed_technologies-k4111c-vinnikova_e_m/blob/main/lab3/img/2.png">
 Рисунок 2 - ReplicaSet
 
 3. С помощью OpenSSL был сгенерирован TLS сертификат. (см. Рисунок 3).
