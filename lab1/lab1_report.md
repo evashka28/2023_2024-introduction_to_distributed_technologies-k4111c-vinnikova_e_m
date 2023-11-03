@@ -6,7 +6,7 @@
 <p> Author: Vinnikova Eva Mikhailovna
 <p> Lab: Lab1
 <p> Date of create: 17.10.2023
-<p> Date of finished: 27.10.2023
+<p> Date of finished: 03.11.2023
 
 <h4>Отчёт о выполнении лабораторной работы</h4>
 
@@ -26,9 +26,9 @@
 <image src="https://github.com/evashka28/2023_2024-introduction_to_distributed_technologies-k4111c-vinnikova_e_m/blob/main/lab1/img/4.png">
 Рисунок 4 - Успешная авторизация
 
-5. Была создана новая схема организации контейеров и сервисов
+5. Была создана новая схема организации контейнеров и сервисов
 <image src="https://github.com/evashka28/2023_2024-introduction_to_distributed_technologies-k4111c-vinnikova_e_m/blob/main/lab1/img/5.png">
-Рисунок 5 - Схема организации контейеров и сервисов
+Рисунок 5 - Схема организации контейнеров и сервисов
 
 
 

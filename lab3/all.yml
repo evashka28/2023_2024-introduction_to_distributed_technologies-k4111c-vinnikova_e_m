@@ -1,15 +1,7 @@
 apiVersion: v1
-kind: Namespace
-metadata:
-   name: lab3
-
----
-
-apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: secret-cm
-  namespace: lab3
+  name: lab3-cm
   labels:
     app: lab3
 data:
@@ -23,7 +15,6 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: lab3-rs
-  namespace: lab3
   labels:
     app: lab3
 spec:
@@ -43,12 +34,12 @@ spec:
         - name: REACT_APP_USERNAME
           valueFrom:
               configMapKeyRef:
-                name: secret-cm
+                name: lab3-cm
                 key:  react_app_username
         - name: REACT_APP_COMPANY_NAME
           valueFrom:
               configMapKeyRef:
-                name: secret-cm
+                name: lab3-cm
                 key: react_app_company_name
         ports:
         - containerPort: 3000
@@ -59,7 +50,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: lab3-service
-  namespace: lab3
   labels:
     app: lab3
 spec:
@@ -77,16 +67,15 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingr
-  namespace: lab3
   labels:
     app: lab3
 spec:
   tls:
   - hosts:
-      - eva.com
-    secretName: lab3-tls
+      - evaa.com
+    secretName: app-tls
   rules:
-   - host: eva.com
+   - host: evaa.com
      http:
         paths:
           - pathType: Prefix
@@ -103,9 +92,6 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: lab3-tls
-  namespace: lab3
-  labels:
-    app: lab3
 type: kubernetes.io/tls
 stringData:
   tls.crt: |
